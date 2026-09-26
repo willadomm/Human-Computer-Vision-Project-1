@@ -6,7 +6,7 @@ import cv2
 
 SIZE_OF_GAUSSIAN_FILTER = 9
 SIGMA_OF_GAUSSIAN_FILTER = 2.5
-HIGH_PASS_WEIGHT = .8
+HIGH_PASS_WEIGHT = 1.1
 
 def get_eye_points_opencv(image):
     
@@ -124,8 +124,8 @@ def combine_images(lowpassimage, highpassimage):
 
 
 def main():
-    img1 = np.array(Image.open("dataset/aligned/face_0002.png").convert("RGB"))
-    img2 = np.array(Image.open("dataset/aligned/face_0003.png").convert("RGB"))
+    img1 = np.array(Image.open("dataset/medium/face_0008.png").convert("RGB"))
+    img2 = np.array(Image.open("dataset/medium/face_0009.png").convert("RGB"))
 
     print("Choose alignment method:")
     print("  1) No alignment")
